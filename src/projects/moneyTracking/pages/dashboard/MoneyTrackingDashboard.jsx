@@ -12,12 +12,12 @@ import { GiTakeMyMoney, GiReceiveMoney, GiPayMoney } from "react-icons/gi";
 import { PiBank } from "react-icons/pi";
 import RecentTransactions from "../../components/dashboard/RecentTransactions";
 import BudgetTracking from "../../components/dashboard/BudgetTracking";
+import Modal from "../../../../ui/Modal";
 
 const MoneyTrackingDashboard = () => {
-  
   const expensesGraphData = mockExpensesGraphData.default; // Access the default export from the mockExpensesGraphData object
   const expenseBreakDownData = mockExpenseBreakDownData.default; // Access the default export from the mockExpenseBreakDownData object
-  const transactionHistory = mockTransactionHistory.default
+  const transactionHistory = mockTransactionHistory.default;
   const budgetTrackingData = mockBudgetTracking.default; // Using the mock data for budget tracking
 
   return (
@@ -72,7 +72,7 @@ const MoneyTrackingDashboard = () => {
           />
         </div>
       </div>
-      <div className="h-[400px] grid grid-cols-2 gap-4">
+      <div className="h-100px grid grid-cols-2 gap-4">
         <RecentTransactions
           title="Recent Transactions"
           height="h-[650px]"
@@ -93,6 +93,25 @@ const MoneyTrackingDashboard = () => {
           height="h-[650px]"
         />
       </div>
+      <Modal
+        isOpen={true}
+        onClose={() => {}}
+        title="Budget Tracking"
+        width="w-[600px]"
+        height="h-[400px]"
+      >
+        <BudgetTracking
+          title="Budget Tracking"
+          totalBudget={budgetTrackingData.totalBudget}
+          spentAmount={budgetTrackingData.spentAmount}
+          budgetCategories={budgetTrackingData.budgetCategories}
+          topCategories={budgetTrackingData.topCategories}
+          onViewDetails={() => {
+            console.log("View Details clicked");
+          }}
+          height="h-[650px]"
+        />
+      </Modal>
     </div>
   );
 };
