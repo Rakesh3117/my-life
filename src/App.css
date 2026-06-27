@@ -1,0 +1,72 @@
+/* App component styles */
+
+.page-container {
+  padding: 1.5rem;
+}
+
+.text-xl {
+  font-size: 32px;
+}
+.text-h2 {
+  font-size: 30px;
+}
+.text-h3 {
+  font-size: 24px;
+}
+.text-body {
+  font-size: 16px;
+}
+.text-small {
+  font-size: 14px;
+}
+
+.card {
+  background-color: #334155;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+
+.input-base {
+  width: 100%;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: #2563eb;
+}
